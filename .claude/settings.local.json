@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(export PATH=\"/c/Program Files/nodejs:$PATH\")",
+      "Bash(npx tsc:*)",
+      "Bash(npx vercel:*)",
+      "Bash(find /c/Users/perne/SRV/ayudalia/src -type f \\\\\\(-name *.tsx -o -name *.ts \\\\\\))",
+      "Bash(find /c/Users/perne/SRV/ayudalia -type f \\\\\\(-name *.sql -o -name *migration* \\\\\\))",
+      "Bash(npm install:*)",
+      "Bash(find C:/Users/perne/SRV/ayudalia -maxdepth 2 -type f \\\\\\(-name *.html -o -name *manifest* -o -name *sitemap* -o -name *robots* \\\\\\))",
+      "Bash(npx vite:*)",
+      "Bash(git init:*)",
+      "Bash(git branch:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}
