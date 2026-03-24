@@ -29,7 +29,7 @@ export function MainLayout() {
           <Header unreadCount={unreadCount} />
         </div>
         {!user && <GuestBanner />}
-        <main className="flex-1 w-full max-w-4xl mx-auto pb-20 md:pb-0">
+        <main className="flex-1 w-full max-w-2xl mx-auto pb-20 md:pb-0">
           <Outlet />
         </main>
         <div className="hidden md:block">

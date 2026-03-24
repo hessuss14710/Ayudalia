@@ -188,11 +188,11 @@ export function HomePage() {
         </div>
       </div>
 
-      {/* Posts grid */}
+      {/* Posts timeline */}
       {loading ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 px-4 md:px-6 pb-6">
+        <div className="flex flex-col gap-0 pb-6">
           {[1, 2, 3, 4, 5, 6].map((i) => (
-            <div key={i} className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+            <div key={i} className="bg-white border-b border-gray-200 overflow-hidden">
               <PostSkeleton />
             </div>
           ))}
@@ -209,9 +209,9 @@ export function HomePage() {
           )}
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 px-4 md:px-6 pb-6">
+        <div className="flex flex-col gap-0 pb-6">
           {filteredPosts.map((post) => (
-            <div key={post.id} className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200">
+            <div key={post.id} className="bg-white border-b border-gray-200 overflow-hidden hover:bg-gray-50/50 transition-colors duration-150">
               <PostCard
                 post={post}
                 onLike={toggleLike}
