@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router'
-import { TrendingUp, ExternalLink, Flame, Users, Heart, Newspaper, RefreshCw } from 'lucide-react'
+import { TrendingUp, Flame, Users, Heart, Newspaper, RefreshCw } from 'lucide-react'
 import { usePosts } from '@/hooks/usePosts'
 import { useCampaigns } from '@/hooks/useCampaigns'
 import { CATEGORIES } from '@/lib/constants'
@@ -146,7 +146,7 @@ export function TrendingSidebar() {
               <div className="flex items-start justify-between">
                 <div>
                   <p className="text-xs text-gray-500">Tendencia #{index + 1}</p>
-                  <p className="text-sm font-bold text-gray-900">{cat.emoji} {cat.name}</p>
+                  <p className="text-sm font-bold text-gray-900">{cat.name}</p>
                   <p className="text-xs text-gray-500 mt-0.5">{cat.count} publicaciones</p>
                 </div>
                 {index === 0 && <Flame size={16} className="text-orange-400 mt-1" />}
