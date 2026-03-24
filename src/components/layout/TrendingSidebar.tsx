@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router'
-import { TrendingUp, Flame, Users, Heart, Newspaper, RefreshCw, Search, MessageCircle, Repeat2, BarChart3, Clock } from 'lucide-react'
+import { TrendingUp, Flame, Users, Heart, RefreshCw, Search, MessageCircle, Repeat2, BarChart3, Clock } from 'lucide-react'
 import { usePosts } from '@/hooks/usePosts'
 import { useCampaigns } from '@/hooks/useCampaigns'
 import { CATEGORIES } from '@/lib/constants'
@@ -284,15 +284,15 @@ export function TrendingSidebar() {
               className="block px-4 py-3 hover:bg-gray-100/80 transition-colors no-underline"
             >
               <div className="flex items-center gap-2 mb-1">
-                {post.profiles?.avatar_url ? (
-                  <img src={post.profiles.avatar_url} alt="" className="w-5 h-5 rounded-full object-cover" />
+                {post.author?.avatar_url ? (
+                  <img src={post.author.avatar_url} alt="" className="w-5 h-5 rounded-full object-cover" />
                 ) : (
                   <div className="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 text-xs font-bold">
-                    {post.profiles?.full_name?.[0]?.toUpperCase() ?? '?'}
+                    {post.author?.full_name?.[0]?.toUpperCase() ?? '?'}
                   </div>
                 )}
                 <span className="text-xs text-gray-500 font-medium truncate">
-                  {post.profiles?.full_name ?? 'Usuario'}
+                  {post.author?.full_name ?? 'Usuario'}
                 </span>
                 <span className={`text-xs px-1.5 py-0.5 rounded font-medium ${
                   post.post_type === 'oferta'
